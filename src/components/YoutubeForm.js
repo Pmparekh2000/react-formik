@@ -3,12 +3,14 @@ import React from "react";
 import { initialValues } from "../form/youtube/intialValues";
 import { onSubmit } from "../form/youtube/onSubmit";
 import { validate } from "../form/youtube/validate";
+import validationSchema from "../form/youtube/validationSchema";
 
 const YoutubeForm = () => {
   // Make use of short-hand syntax and import stuff from different files to keep thigs readable
   const formik = useFormik({
     initialValues,
-    validate,
+    // validate,
+    validationSchema,
     onSubmit,
   });
 
